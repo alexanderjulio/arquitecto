@@ -1,0 +1,375 @@
+body {
+  font-family: 'Allerta', sans-serif;
+  margin: 0 0 65px;
+}
+
+input, textarea {
+  outline: 0;
+}
+
+input:focus, textarea:focus {
+  background: lightgray;
+}
+
+.background {
+  background-image: url('../images/oficina.jpg');
+  background-size: cover;
+}
+
+.button {
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  background: #fd324e;
+  background: linear-gradient(to left, #fe344e, #ff7250);
+  align-self: flex-end;
+  margin: 10px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3c5bd+0,e86c57+50,ea2803+51,ff6600+75,c72200+100;Red+Gloss */
+  /*background: rgb(243,197,189); /* Old browsers */
+  /* background: -moz-linear-gradient(top,  rgba(243,197,189,1) 0%, rgba(232,108,87,1) 50%, rgba(234,40,3,1) 51%, rgba(255,102,0,1) 75%, rgba(199,34,0,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%);
+  background: linear-gradient(to bottom,  rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c5bd', endColorstr='#c72200',GradientType=0 ); */
+}
+
+.contenedor {
+  width: 800px;
+  margin: auto;
+  position: relative;
+  margin-bottom: 10px;
+  border: 1px solid red;
+}
+
+
+/*inicio hover*/
+
+.view {
+    width: 400px;
+    height: 100px;
+    margin: 20px;
+    float: left;
+    border: 1px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+}
+
+.view .mask, .view .content {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.view img {
+    display: block;
+    position: relative;
+}
+
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    position: relative;
+    color: white;
+    padding: 10px 20px 20px;
+    text-align: center;
+}
+
+.view img {
+    transition: all 0.1s linear;
+}
+.view .mask {
+    /*opacity: 0;*/
+    /*background-color: hsla(34,93%,45%,0.7);  Color naranja con 0.7 de opacidad  */
+     opacity: 0;
+    /*background-color: hsla(0,0%,0%,0.3);*/
+    transition: all 0.1s ease-in;
+    transform: scale(0) rotate(-90deg);
+}
+
+.view p { 
+   /* opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.2s linear;*/
+    transition: all 0.1s ease-in;
+    transform: scale(0) rotate(-190deg);
+    transition: all 0.1s ease-in-out 0.1s;
+    opacity: 0;
+    transform: translateY(0px);
+}
+
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000;
+}
+
+.view a.info {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+/*Reglas que se activas al hacer hover*/
+.view:hover img { 
+    transform: scale(1.1);
+} 
+.view:hover .mask { 
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transition-delay: 0.1s;
+}
+
+.view:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.view:hover p {
+     transition-delay: 0.1s;
+     transform: rotate(0deg) scale(1);
+    opacity: 1;
+}
+.view:hover a.info {
+    transition-delay: 0.2s;
+}
+
+/*fin hover*/
+
+/*Aqui comienza FLEX*/
+.padre {
+	/*border: 1px solid red; con atributos*/
+	border: 1px solid;
+	border-radius: 8px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	flex-direction: row; /*para filas*/
+	/*flex-direction: column; para columnas*/
+}
+
+.hijo {
+	width: 200px;
+	height: 136px;
+	margin: 43px;
+	background: white;
+	border: 1px;
+	/*display: flex;*/
+	/*align-items: center;*/
+	justify-content: center; /*alineado vertical*/
+	flex-direction: column;
+	color: black;
+}
+/*Aqui termina FLEX*/
+
+
+
+
+
+/*Header*/
+
+
+
+
+/*Opacidad*/
+.opacidad {
+	opacity: 0.7; /*Este es el atributo para opacidad*/
+	/*border: 1px solid red; con atributos*/
+	/*border: 1px solid;*/
+	/*border-radius: 8px;*/
+	display: flex;
+	justify-content: right;
+	flex-wrap: nowrap;
+	flex-direction: row; /*para filas*/
+	/*flex-direction: column; para columnas*/
+}
+
+.opacidad1 {
+	width: 300px;
+	height: 100px;
+	/*margin: 40px;*/
+	background: white;
+	border: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: center; /*alineado vertical*/
+	/*flex-direction: column;*/
+	color: red;
+	margin-right: 15px;
+	padding-right: 25px;
+}
+
+.opacidad2 {
+	width: 800px;
+	height: 200px;
+	background: black;
+	border: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: center; /*alineado vertical*/
+	flex-direction: column;
+	color: white;
+	margin-right: 15px;
+}
+
+.opacidad3 {
+  width: 300px;
+  height: 40px;
+  background: black;
+  border: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  margin-right: 15px;
+  padding-right: 20px;
+}
+
+
+.titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 54px;
+  margin-bottom: 0;
+  margin-top: 0px;
+}
+
+.titulo span {
+  text-decoration: underline;
+}
+
+.title-a {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.title-b {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.portada {
+  color: black;
+  padding: 20px;
+  height: 500px;
+}
+
+.portada button {
+  margin-bottom: 70px;
+}
+
+.menu {
+  font-size: 18px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin-right: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 0px;
+}
+
+.menu li:before{
+  content: '∘';
+  font-size: 40px;
+  line-height: 20px;
+  color: green;
+}
+
+.menu a {
+  color: green;
+  text-decoration: none;
+}
+
+.logotipo {
+  display: inline-block;
+  margin-left: 0;
+}
+
+/*Fin header*/
+
+
+
+
+/*Aqui comienza el flex del pie de pagina footer*/
+.footer {
+  background: #273b47;
+  padding: 50px 10px;
+}
+
+.contacto {
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contacto img {
+  display: block;
+}
+
+.contacto strong {
+  display: block;
+}
+
+.contacto a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 0px 0px 0;
+}
+
+.footer .contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formulario {
+  display: flex;
+  width: 400px;
+  color: white;
+}
+
+.col1, .col2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.col1 {
+  margin-right: 15px;
+}
+.col2 {
+  align-items: flex-start;
+}
+
+.col2 .button {
+  margin-top: 15px;
+}
+
+.intereses label {
+  font-size: 12px;
+}
+
+.formulario label, .sexo, .intereses {
+  margin-bottom: 10px;
+}
+
+.sexo {
+  margin-top: 10px;
+}
+/*Aqui termina el footer*/
