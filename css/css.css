@@ -41,7 +41,7 @@ input:focus, textarea:focus {
   margin: auto;
   position: relative;
   margin-bottom: 10px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 
@@ -240,6 +240,18 @@ input:focus, textarea:focus {
   padding-right: 20px;
 }
 
+.opacidad4 {
+  widsth: 800px;
+  heigdht: 40px;
+  background: black;
+  border: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /*alineado vertical*/
+  flex-direction: column;
+  color: white;
+  margin-right: 15px;
+}
 
 .titulo {
   font-family: 'Montserrat', sans-serif;
@@ -288,12 +300,12 @@ input:focus, textarea:focus {
 .menu li:before{
   content: '∘';
   font-size: 40px;
-  line-height: 20px;
+  line-height: 0px;
   color: green;
 }
 
 .menu a {
-  color: green;
+  color: white;
   text-decoration: none;
 }
 
